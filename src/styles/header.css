@@ -1,0 +1,10 @@
+.main-header{
+    /* margin-bottom: -100px; */
+    z-index: 20;
+    border: 1xp solid red;
+}
+
+.header-logo{
+    width: 220px;
+    margin: 0 auto;
+}

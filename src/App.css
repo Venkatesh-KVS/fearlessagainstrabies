@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+@import url("./styles/header.css");
+@import url("./styles/flex.css");
+@import url("./styles/widths.css");
+@import url("./styles/positions.css");
+@import url("./styles/farCard.css");
+
+@font-face {
+  font-family: ATROX;
+  src: url(./fonts/ATROX.TTF);
+}
+* {
+  color: var(--textColor);
+}
+:root {
+  --primaryColor: #f15a24;
+  --secondaryColor: #b72133;
+  --blackColor: #1d090b;
+  --textColor: #4f4f4f;
+  --whiteColor: #ffffff;
+}
+.blackColor {
+  color: var(--blackColor);
+}
+.primaryColor {
+  color: var(--primaryColor);
+}
+.secondaryColor {
+  color: var(--secondaryColor);
+}
+.textColor {
+  color: var(--textColor);
+}
+.whiteColor {
+  color: var(--whiteColor);
+}
+.bgPrimary {
+  background-color: var(--primaryColor);
+}
+.bgSecondary {
+  background-color: var(--secondaryColor);
+}
+.fontA,
+h1,
+h2,
+h3 {
+  font-family: ATROX;
+}
+.border-red {
+  border: 1px solid red;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-1180 {
+  width: 1180px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.far-btn {
+  border: 1px solid white;
+  padding: 5px 10px;
   color: white;
+  background-color: transparent;
+  transition: 0.5s;
+}
+.far-btn:hover {
+  background-color: white;
+  color: red;
+}
+.heading-1 {
+  font-size: 58px;
+  line-height: 1.3em;
+}
+.heading-2 {
+  font-size: 40px;
+  line-height: 1.2em;
+}
+.heading-3 {
+  font-size: 28px;
+}
+.heading-4 {
+  font-size: 22px;
+}
+.heading-5 {
+  font-size: 18px;
+}
+.textAll {
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Buttons */
+
+.lm {
+  padding: 10px 28px;
+  background-color: var(--secondaryColor);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  margin: 20px auto;
+}
+.lm:hover {
+  background-color: var(--primaryColor);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Shadows */
+.boxShadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 35px 0px;
 }

@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import RabiesAndYou from "./pages/RabiesAndYou";
+import RabiesAndDoctor from "./pages/RabiesAndDoctor";
+import PreExposureVaccination from "./pages/PreExposureVaccination";
+import RabiesVaccineSchedule from "./pages/RabiesVaccineSchedule";
+import Login from "./auth/Login";
+import Register from "./auth/Register";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/rabies-and-you" element={<RabiesAndYou />} />
+          <Route path="/rabies-and-doctor" element={<RabiesAndDoctor />} />
+          <Route
+            path="/pre-exposure-vaccination"
+            element={<PreExposureVaccination />}
+          />
+          <Route
+            path="/rabies-vaccine-schedule"
+            element={<RabiesVaccineSchedule />}
+          />
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }

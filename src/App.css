@@ -3,6 +3,7 @@
 @import url("./styles/widths.css");
 @import url("./styles/positions.css");
 @import url("./styles/farCard.css");
+@import url("./styles/pages.css");
 
 @font-face {
   font-family: ATROX;
@@ -15,8 +16,9 @@
   --primaryColor: #f15a24;
   --secondaryColor: #b72133;
   --blackColor: #1d090b;
-  --textColor: #4f4f4f;
+  --textColor: #4f4d4d;
   --whiteColor: #ffffff;
+  --bg: #f8f8f8;
 }
 .blackColor {
   color: var(--blackColor);
@@ -32,6 +34,9 @@
 }
 .whiteColor {
   color: var(--whiteColor);
+}
+.bg {
+  background-color: var(--bg);
 }
 .bgPrimary {
   background-color: var(--primaryColor);
@@ -71,14 +76,16 @@ body {
 }
 .heading-1 {
   font-size: 58px;
-  line-height: 1.3em;
+  line-height: 1.2em;
 }
 .heading-2 {
   font-size: 40px;
   line-height: 1.2em;
+  margin-bottom: 0;
 }
 .heading-3 {
   font-size: 28px;
+  line-height: 1.2em;
 }
 .heading-4 {
   font-size: 22px;

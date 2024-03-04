@@ -1,0 +1,11 @@
+.tabBox {
+  display: flex;
+  gap: 35px;
+  img {
+    mask-image: url("/public/images/mask/pawprint.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    width: 100%;
+  }
+}

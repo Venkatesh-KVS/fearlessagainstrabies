@@ -7,7 +7,7 @@ export const WhoAreAtRisk = () => {
       <div className="aboutTab">
         <div className="waar d-flex gap-4">
           <div className="waar_c1 w-60">
-            <h2 className="heading-2">About Fearless Against Rabies</h2>
+            <h2 className="heading-2">Who are at risk of rabies</h2>
             <p>
               Any activity that increases the probability of a person coming in
               contact with saliva, body fluids, or tissue of rabid animals

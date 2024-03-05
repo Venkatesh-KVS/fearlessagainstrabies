@@ -50,7 +50,7 @@ export const PreventionRabies = () => {
 const Wrapper = styled.section`
   .PR-r2 {
     gap: 35px;
-    margin: 35px 0;
+    margin: 35px auto;
     .PR-box {
       text-align: center;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

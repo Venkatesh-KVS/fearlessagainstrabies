@@ -6,6 +6,8 @@ import { HWIKIHR } from "../components/HWIKIHR";
 import { DiagnosingRabies } from "../components/DiagnosingRabies";
 import { HowRabiesTreated } from "../components/HowRabiesTreated";
 import { PreventionRabies } from "../components/PreventionRabies";
+import { Vaccination } from "../components/Vaccination";
+import { SotV } from "../components/SotV";
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
@@ -79,6 +81,12 @@ const RabiesAndYou = () => {
               </TabPanel>
               <TabPanel className="" value={value} index={4}>
                 <PreventionRabies />
+              </TabPanel>
+              <TabPanel className="" value={value} index={5}>
+                <Vaccination />
+              </TabPanel>
+              <TabPanel className="" value={value} index={6}>
+                <SotV />
               </TabPanel>
             </div>
           </div>

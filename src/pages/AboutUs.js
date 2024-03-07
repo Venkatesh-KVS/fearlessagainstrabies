@@ -36,7 +36,7 @@ const AboutUs = () => {
   return (
     <Wrapper>
       <div className="about-us">
-        <div className="about-banner d-flex">
+        <div className="pageBanner about-banner d-flex">
           <div className="left w-50 "></div>
           <div className="right w-50 ">
             <h3 className="heading-3 textColor m-0">EDUCATE & REDUCE</h3>
@@ -82,7 +82,6 @@ export default AboutUs;
 
 const Wrapper = styled.section`
   .about-us {
-    margin-top: -180px;
     .tabs {
       margin: 65px auto;
       .tabTitle {
@@ -112,11 +111,7 @@ const Wrapper = styled.section`
     }
   }
   .about-banner {
-    height: 78vh;
     background-image: url("./images/banner/about-rabies.jpg");
-    background-attachment: fixed;
-    background-size: contain;
-    background-repeat: no-repeat;
     .right {
       vertical-align: center;
       justify-content: center;

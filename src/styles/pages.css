@@ -9,3 +9,22 @@
     width: 100%;
   }
 }
+.pageBanner {
+  margin-top: -180px;
+  height: 78vh;
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  .right {
+    vertical-align: center;
+    justify-content: center;
+    margin: auto 0px 100px;
+    h1 {
+      line-height: 1em;
+    }
+    h3 {
+      font-family: inherit;
+      font-weight: 600;
+    }
+  }
+}

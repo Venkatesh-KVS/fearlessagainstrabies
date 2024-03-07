@@ -4,7 +4,6 @@ import Section2 from "./HomeComponents/Section2";
 import Section3 from "./HomeComponents/Section3";
 import Section4 from "./HomeComponents/Section4";
 import Section5 from "./HomeComponents/Section5";
-// import Section6 from "./HomeComponents/Section6";
 
 export default function Home() {
   return (

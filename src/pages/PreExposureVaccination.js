@@ -36,14 +36,16 @@ const PreExposureVaccination = () => {
 
   return (
     <Wrapper>
-      <div className="PEV">
-        <div className="about-banner d-flex">
-          <div className="left w-50 "></div>
-          <div className="right w-50 ">
-            <h3 className="heading-3 textColor m-0">
-              LEARN ABOUT PRE EXPOSURE VACCINATION
-            </h3>
-            <h1 className="heading-1 primaryColor">protect yourself</h1>
+      <div className="PeV">
+        <div className="pageBanner PeV-banner ">
+          <div className="bannerInfo container">
+            <div className="left w-50 "></div>
+            <div className="right w-50 ">
+              <h3 className="heading-3 textColor m-0">
+                LEARN ABOUT PRE EXPOSURE VACCINATION
+              </h3>
+              <h1 className="heading-1 primaryColor">protect yourself</h1>
+            </div>
           </div>
         </div>
         <div className="aboutTabs container">
@@ -57,7 +59,7 @@ const PreExposureVaccination = () => {
                 <Tab className="tabTitle" label="Pre Exposure Vaccination" />
                 <Tab className="tabTitle" label="About us" />
                 <Tab className="tabTitle" label="Bitten by a dog" />
-                <Tab className="tabTitle" label="who are at risk?" />
+                <Tab className="tabTitle" label="Who are at risk?" />
                 <Tab className="tabTitle" label="Oath" />
               </Tabs>
             </div>
@@ -88,8 +90,7 @@ const PreExposureVaccination = () => {
 export default PreExposureVaccination;
 
 const Wrapper = styled.section`
-  .PEV {
-    margin-top: -180px;
+  .PeV {
     .tabs {
       margin: 65px auto;
       .tabTitle {
@@ -120,23 +121,13 @@ const Wrapper = styled.section`
       padding: 0 35px;
     }
   }
-  .about-banner {
-    height: 78vh;
+  .PeV-banner {
     background-image: url("./images/banner/pre-exposure-vaccination.jpg");
-    background-attachment: fixed;
-    background-size: contain;
-    background-repeat: no-repeat;
-    .right {
-      vertical-align: center;
-      justify-content: center;
-      margin: auto 0px 100px;
-      h1 {
-        line-height: 1em;
-      }
-      h3 {
-        font-family: inherit;
-        font-weight: 600;
-      }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .bannerInfo {
+      border: 2px solid red;
     }
   }
 `;

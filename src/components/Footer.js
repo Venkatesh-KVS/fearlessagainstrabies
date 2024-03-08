@@ -1,6 +1,7 @@
 // import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Nav } from "react-bootstrap";
+import { NewsLetter } from "./Form";
 
 export default function Footer() {
   return (
@@ -50,25 +51,11 @@ export default function Footer() {
                   </Nav>
                 </div>
               </div>
-              <div className="fm-c-r1c3 f-ns w-25">
-                <form>
-                  <div class="mb-3 ">
-                    <label for="exampleInputEmail1" class="form-label">
-                      <h3 className="heading-3">Subscribe to the newsletter</h3>
-                    </label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                      placeholder="Enter your email"
-                    />
-                  </div>
 
-                  <button type="submit" class="btn">
-                    Submit
-                  </button>
-                </form>
+              {/* News Letter */}
+
+              <div className="fm-c-r1c3 f-ns w-25">
+                <NewsLetter />
               </div>
             </div>
             <div className="fm-c-r2 ">

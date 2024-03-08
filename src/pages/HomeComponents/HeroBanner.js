@@ -1,7 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import styled from "styled-components";
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
 
 export default function HeroBanner() {
   return (
@@ -14,7 +13,7 @@ export default function HeroBanner() {
             { imageSrc: "/images/banner_home_02.jpg", caption: <Caption3 /> },
             { imageSrc: "/images/banner_home_03.jpg", caption: <Caption4 /> },
           ].map((item, index) => (
-            <Carousel.Item>
+            <Carousel.Item key={index}>
               <div
                 style={{
                   width: "100%",
@@ -35,42 +34,55 @@ export default function HeroBanner() {
 
 const Caption1 = () => {
   return (
-    <div>
-      <h1 className="heading-1 primaryColor">
-        WE BOTH ARE PROTECTED AGAINST RABIES{" "}
-      </h1>
-      <h2 className="heading-2 whiteColor"> ARE YOU TOO? </h2>
-      <button className="lm bgSecondary btn-lg"> Learn More </button>
+    <div className="d-flex">
+      <div className="w-60"></div>
+      <div className="slide-info w-40 ">
+        <h1 className="heading-1 primaryColor">
+          WE BOTH ARE PROTECTED AGAINST RABIES{" "}
+        </h1>
+        <h2 className="heading-2 whiteColor"> ARE YOU TOO? </h2>
+        <button className="lm bgSecondary btn-lg"> Learn More </button>
+      </div>
     </div>
   );
 };
 
 const Caption2 = () => {
   return (
-    <div>
-      <h1 className="heading-1 primaryColor">LET YOUR PET LOVE BE FEARLESS</h1>
-      <h2 className="heading-2 whiteColor">PROTECT YOURSELF</h2>
+    <div className="d-flex">
+      <div className="w-60"></div>
+      <div className="slide-info w-40">
+        <h1 className="heading-1 primaryColor">
+          LET YOUR PET LOVE BE FEARLESS
+        </h1>
+        <h2 className="heading-2 whiteColor">PROTECT YOURSELF</h2>
+      </div>
     </div>
   );
 };
 
 const Caption3 = () => {
   return (
-    <div>
-      <h1 className="heading-1 primaryColor"> LET YOUR CHILD BE FEARLESS </h1>
-      <h2 className="heading-2 whiteColor"> PROTECT FROM RABIES </h2>
+    <div className="d-flex">
+      <div className="w-60"></div>
+      <div className="slide-info w-40">
+        <h1 className="heading-1 primaryColor"> LET YOUR CHILD BE FEARLESS </h1>
+        <h2 className="heading-2 whiteColor"> PROTECT FROM RABIES </h2>
+      </div>
     </div>
   );
 };
 
 const Caption4 = () => {
   return (
-    <div>
-      <h1 className="heading-1 primaryColor">
-        {" "}
-        LET YOUR MORNING RUN BE FEARLESS{" "}
-      </h1>
-      <h2 className="heading-2 whiteColor"> PROTECT YOURSELF FROM RABIES </h2>
+    <div className="d-flex ">
+      <div className="w-60"></div>
+      <div className="slide-info w-40">
+        <h1 className="heading-1 primaryColor">
+          LET YOUR MORNING RUN BE FEARLESS
+        </h1>
+        <h2 className="heading-2 whiteColor"> PROTECT YOURSELF FROM RABIES </h2>
+      </div>
     </div>
   );
 };
@@ -78,11 +90,21 @@ const Caption4 = () => {
 const Wrapper = styled.section`
   .heroSec {
     margin-bottom: 65px;
+    .slide-info {
+      text-align: start;
+      padding-bottom: 5%;
+    }
     .heading-2 {
-      text-shadow: 2px 2px #00000050;
+      text-shadow: 2px 2px #00000080;
+      font-family: inherit;
+      font-size: 24px;
+      margin: 20px auto;
+      font-weight: 800;
     }
     .heading-1 {
-      text-shadow: 1px 1px #00000020;
+      text-shadow: 1px 1px #00000050;
+      font-size: 58px;
+      line-height: 1em;
     }
     margin-top: -172px;
     z-index: 0;
@@ -99,6 +121,9 @@ const Wrapper = styled.section`
       .active {
         background-color: var(--secondaryColor);
       }
+    }
+    span {
+      color: var(--secondaryColor);
     }
   }
 `;

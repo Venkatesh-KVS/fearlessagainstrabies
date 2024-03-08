@@ -23,9 +23,8 @@ export default function Section3() {
           className="boxShadow"
           src="https://www.youtube.com/embed/PAZqjN9Thx0?si=KEZZwRepXqYC8UaH"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
     </Wrapper>

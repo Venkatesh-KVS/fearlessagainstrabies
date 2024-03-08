@@ -1,9 +1,7 @@
 import React from "react";
 import FARcard from "../../components/FARcard";
 import styled from "styled-components";
-// import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
+import { RegisterRabiesEducation } from "../../components/Form";
 
 export default function Section5() {
   return (
@@ -52,28 +50,8 @@ export default function Section5() {
               Register Your School for
             </h5>
             <h2 className="heading-2 secondaryColor">Rabies Education</h2>
-            <div className="form-fields ">
-              <TextField
-                id="filled-basic"
-                label="Your School Name"
-                variant="filled"
-              />
-              <TextField
-                id="filled-basic"
-                label="Your School Address"
-                variant="filled"
-              />
-              <TextField id="filled-basic" label="Email" variant="filled" />
-              <TextField
-                id="filled-basic"
-                label="Number"
-                type="number"
-                variant="filled"
-              />
-            </div>
-            <div className="bton">
-              <Button variant="contained">Submit</Button>
-            </div>
+
+            <RegisterRabiesEducation />
           </div>
         </div>
       </div>
@@ -92,15 +70,17 @@ const Wrapper = styled.section`
     padding: 35px;
     border-radius: 15px;
   }
-  .bton {
-    button {
-      background-color: var(--primaryColor);
-      margin-top: 10px;
-      &:hover {
-        background-color: var(--secondaryColor);
-      }
+
+  button {
+    background-color: var(--primaryColor);
+    margin-top: 10px;
+    color: var(--whiteColor);
+    &:hover {
+      color: var(--whiteColor);
+      background-color: var(--secondaryColor);
     }
   }
+
   .form-fields {
     display: flex;
     gap: 10px;

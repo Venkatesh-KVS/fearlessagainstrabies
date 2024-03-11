@@ -1,26 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import { NavLink } from "react-router-dom";
-
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import styled from "styled-components";
 
 export const Oath = () => {
+  const [name, setName] = useState("");
+  const [oathSubmitedMsg, setOathSubmitedMsg] = useState(null);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Your EmailJS service ID, template ID, and Public Key
+    const serviceId = "service_8xkoe6k";
+    const templateId = "template_p0uj2yt";
+    const publicKey = "58JkgK72qjAJ_jugf";
+    // Create an object with EmailJS service ID, template ID, Public Key, and Template params
+    const data = {
+      service_id: serviceId,
+      template_id: templateId,
+      user_id: publicKey,
+      template_params: {
+        name: name,
+        from_name: "Oath",
+      },
+    };
+    // Send the email using EmailJS
+    try {
+      const res = await axios.post(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        data
+      );
+      if (res.data === "OK") {
+        setOathSubmitedMsg("success");
+      } else {
+        setOathSubmitedMsg("error");
+      }
+      console.log(res.data);
+      setOathSubmitedMsg("");
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <Wrapper>
-      <div>
+      <div id="oath">
         <h1 className="heading-2">
           <span className="primaryColor">4048 </span>people have taken the
           <span className="secondaryColor"> Oath </span>to fight against rabies
         </h1>
         <div className="oath ">
-          <div className="oath-form">
+          <form onSubmit={handleSubmit} className="oath-form">
             I &nbsp;
             <TextField
-              label="Your name"
-              id="standard-size-normal"
-              defaultValue=""
-              variant="standard"
+              required
+              type="text"
+              id="filled-basic"
+              label="Your Name"
+              variant="filled"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             &nbsp; Your name understand that rabies is a fatal disease that is
             majorly transmitted through rabid animals. I am aware that rabies
@@ -28,9 +66,17 @@ export const Oath = () => {
             oath to spread awareness among my family and friends regarding the
             rabies pre-exposure and post-exposure vaccination and be a part in
             making the world free from rabies.
-          </div>
+          </form>
           <div className="oath-btm text-center">
-            <Button variant="contained">Oath</Button>
+            <Button type="submit" variant="contained">
+              Oath
+            </Button>
+            {oathSubmitedMsg === "success" && (
+              <p className="successMsg text-success small">
+                Oath submitted successfully!
+              </p>
+            )}
+
             <div className="share-icons">
               <NavLink
                 to={
@@ -82,12 +128,7 @@ const Wrapper = styled.section`
   .oath-form {
     margin: 35px 0;
     .MuiFormControl-root {
-      margin-top: -28px;
-      #standard-size-normal {
-        &::placeholder {
-          color: red;
-        }
-      }
+      margin-top: -30px;
     }
   }
   button {

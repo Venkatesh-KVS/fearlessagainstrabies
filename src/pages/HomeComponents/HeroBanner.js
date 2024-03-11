@@ -97,6 +97,7 @@ const Wrapper = styled.section`
     .heading-2 {
       text-shadow: 2px 2px #00000080;
       font-family: inherit;
+      line-height: 1.3em;
       font-size: 24px;
       margin: 20px auto;
       font-weight: 800;
@@ -104,7 +105,6 @@ const Wrapper = styled.section`
     .heading-1 {
       text-shadow: 1px 1px #00000050;
       font-size: 58px;
-      line-height: 1em;
     }
     margin-top: -172px;
     z-index: 0;

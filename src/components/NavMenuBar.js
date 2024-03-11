@@ -48,8 +48,4 @@ export default function NavMenuBar() {
 }
 
 // const Wrapper = styled.section`
-//   .nav  Bar {
-//     border: 2px solid red;
-//     z-index: 100;
-//   }
 // `;

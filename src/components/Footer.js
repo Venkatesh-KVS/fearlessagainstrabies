@@ -41,11 +41,13 @@ export default function Footer() {
                 </div>
                 <div className="nav2 ">
                   <Nav className="nav-items d-flex flex-column">
-                    <Nav.Link href="/"> Bitten by a dog? </Nav.Link>
+                    <Nav.Link href="/about-us"> Bitten by a dog? </Nav.Link>
                     <Nav.Link href="/about-us"> Who are at risk? </Nav.Link>
-                    <Nav.Link href="/rabies-and-you"> Oath </Nav.Link>
-                    <Nav.Link href="/rabies-and-you"> News & Events </Nav.Link>
+                    <Nav.Link href="/about-us "> Oath </Nav.Link>
                     <Nav.Link href="/pre-exposure-vaccination">
+                      Pre Exposure Vaccination
+                    </Nav.Link>
+                    <Nav.Link href="/rabies-vaccine-schedule">
                       Rabies Vaccine Schedule
                     </Nav.Link>
                   </Nav>

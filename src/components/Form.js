@@ -162,7 +162,6 @@ export const NewsLetter = () => {
             Newsletter subscribed successfully!
           </p>
         )}
-        {/* <h4>{nlSubmitedMsg}</h4> */}
       </form>
     </div>
   );

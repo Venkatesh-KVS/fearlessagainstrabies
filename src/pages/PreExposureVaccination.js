@@ -38,10 +38,10 @@ const PreExposureVaccination = () => {
     <Wrapper>
       <div className="PeV">
         <div className="pageBanner PeV-banner ">
-          <div className="bannerInfo container">
+          <div className="bannerInfo d-flex container">
             <div className="left w-50 "></div>
             <div className="right w-50 ">
-              <h3 className="heading-3 textColor m-0">
+              <h3 className="heading-3 textColor">
                 LEARN ABOUT PRE EXPOSURE VACCINATION
               </h3>
               <h1 className="heading-1 primaryColor">protect yourself</h1>
@@ -126,8 +126,10 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+
     .bannerInfo {
-      border: 2px solid red;
+      /* border: 2px solid red; */
+      margin-bottom: -20%;
     }
   }
 `;

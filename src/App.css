@@ -45,12 +45,6 @@
 .bgSecondary {
   background-color: var(--secondaryColor);
 }
-.fontA,
-h1,
-h2,
-h3 {
-  font-family: ATROX;
-}
 .border-red {
   border: 1px solid red;
 }
@@ -74,29 +68,6 @@ body {
 .far-btn:hover {
   background-color: white;
   color: red;
-}
-.heading-1 {
-  font-size: 58px;
-  line-height: 1.2em;
-}
-.heading-2 {
-  font-size: 40px;
-  line-height: 1.2em;
-  margin-bottom: 0;
-}
-.heading-3 {
-  font-size: 28px;
-  line-height: 1.2em;
-}
-.heading-4 {
-  font-size: 22px;
-}
-.heading-5 {
-  font-size: 18px;
-  line-height: 1.5em;
-}
-.textAll {
-  font-size: 16px;
 }
 
 /* Buttons */

@@ -10,8 +10,11 @@ import Login from "./auth/Login";
 import Register from "./auth/Register";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import axios from "axios";
 
 function App() {
+  axios.defaults.withCredentials = true;
+
   return (
     <div className="App">
       <Router>

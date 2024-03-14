@@ -1,14 +1,36 @@
-import React from "react";
+// import React from "react";
 import { Button } from "@mui/material";
-
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-
 import styled from "styled-components";
+// import { Testing } from "../components/Testing";
+import RVSbtnPopup from "../utils/RVSbtnPopup";
+import React, { useState } from "react";
 
 export default function RabiesVaccineSchedule() {
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  const openPopup = (e) => {
+    e.preventDefault();
+    if (!selectedDate) {
+      alert("Please select a date.");
+      return;
+    }
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
+  const handleSubmit = (number) => {
+    // Handle submitted number
+    console.log("Submitted number:", number);
+    closePopup();
+  };
   return (
     <Wrapper>
       <div className="RVS">
@@ -18,17 +40,32 @@ export default function RabiesVaccineSchedule() {
             <h2 className="heading-2 primaryColor">RABIES VACCINE SCHEDULE</h2>
             <p>Select 1st Dose Vaccine Date</p>
             <div className="RVSdateField">
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DemoContainer components={["DatePicker"]}>
-                  <DatePicker className="datePicker" label="Select Date" />
-                </DemoContainer>
-              </LocalizationProvider>
-              <Button className="btnRVS mt-4 " variant="outlined">
-                See Dates
-              </Button>
+              <form action="" onSubmit={openPopup}>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DemoContainer components={["DatePicker"]}>
+                    <DatePicker
+                      required
+                      onChange={(date) => setSelectedDate(date)}
+                      className="datePicker"
+                      label="Select Date"
+                    />
+                  </DemoContainer>
+                </LocalizationProvider>
+                <Button
+                  type="submit"
+                  className="btnRVS mt-4 "
+                  variant="outlined"
+                >
+                  Know Dates
+                </Button>
+              </form>
+              {showPopup && (
+                <RVSbtnPopup onClose={closePopup} onSubmit={handleSubmit} />
+              )}
             </div>
           </div>
         </div>
+        {/* <Testing /> */}
       </div>
     </Wrapper>
   );

@@ -1,3 +1,7 @@
+:root {
+  --text: Roboto, Helvetica, Arial, sans-serif;
+}
+
 p {
   font-size: 16px;
   font-weight: 400;

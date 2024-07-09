@@ -4,8 +4,8 @@ import styled from "styled-components";
 export const DiagnosingRabies = () => {
   return (
     <Wrapper>
-      <div className="DR-r1 tabBox">
-        <div className="DR-c1 w-60">
+      <div className="row">
+        <div className="col-md-7">
           <h2 className="heading-2">Diagnosing Rabies</h2>
           <p>
             Unfortunately, till date there is no single test available to
@@ -33,11 +33,11 @@ export const DiagnosingRabies = () => {
             </li>
           </ul>
         </div>
-        <div className="DR-c2 w-40">
-          <img src="./images/mask/doctor2_dog.jpg" alt="" />
+        <div className="col-md-5">
+          <img src="/images/mask/doctor2_dog.jpg" alt="" />
         </div>
       </div>
-      <div className="DR-r2 ">
+      <div className="">
         <p className="m-0">
           There is no way to know if the animal has transmitted the rabies virus
           to you when the animal bites. Thus, the prevention of rabies infection
@@ -48,4 +48,12 @@ export const DiagnosingRabies = () => {
     </Wrapper>
   );
 };
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  img {
+    mask-image: url("/images/mask/pawprint.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    width: 100%;
+  }
+`;

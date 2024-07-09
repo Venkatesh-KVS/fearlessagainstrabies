@@ -1,16 +1,5 @@
-.tabBox {
-  display: flex;
-  gap: 35px;
-  img {
-    mask-image: url("/public/images/mask/pawprint.svg");
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    mask-position: center;
-    width: 100%;
-  }
-}
 .pageBanner {
-  margin-top: -180px;
+  margin-top: -250px;
   height: 78vh;
   background-attachment: fixed;
   background-size: contain;
@@ -18,7 +7,6 @@
   .right {
     vertical-align: center;
     justify-content: center;
-    /* margin: auto 0px 0px; */
     h1 {
       line-height: 1em;
     }
@@ -27,4 +15,12 @@
       font-weight: 600;
     }
   }
+}
+
+@media (max-width: 768px) {
+  .pageBanner {
+    margin-top: 0px;
+    height: 40vh;
+    background-attachment: scroll;
+  } 
 }

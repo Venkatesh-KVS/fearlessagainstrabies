@@ -1,8 +1,6 @@
-@import url("./styles/header.css");
 @import url("./styles/flex.css");
 @import url("./styles/widths.css");
 @import url("./styles/positions.css");
-@import url("./styles/farCard.css");
 @import url("./styles/pages.css");
 @import url("./styles/text.css");
 
@@ -48,14 +46,9 @@
 .border-red {
   border: 1px solid red;
 }
-
+.bgWhite{ background-color: white; }
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
-}
-
-.container-1180 {
-  width: 1180px;
-  margin: 0 auto;
 }
 
 .far-btn {
@@ -70,22 +63,26 @@ body {
   color: red;
 }
 
-/* Buttons */
-
-.lm {
-  padding: 10px 28px;
-  background-color: var(--secondaryColor);
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 14px;
-  margin: 20px auto;
-}
-.lm:hover {
-  background-color: var(--primaryColor);
-}
-
 /* Shadows */
 .boxShadow {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 35px 0px;
 }
+
+.border-red{
+  border: 2px solid red;
+}
+
+/* ------- Custom Classes -------- */
+.x-small{ font-size: 12px; }
+.button_1{
+  background-color: var(--secondaryColor);
+  color: var(--whiteColor);
+  border: 2px solid var(--secondaryColor);
+  transition: 0.5s;
+  &:hover {
+    border: 2px solid var(--secondaryColor);
+    color: var(--secondaryColor);
+    background-color: var(--whiteColor);
+  }
+}
+/* ------- Custom Classes -------- */

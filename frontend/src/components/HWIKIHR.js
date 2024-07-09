@@ -4,8 +4,8 @@ import styled from "styled-components";
 export const HWIKIHR = () => {
   return (
     <Wrapper>
-      <div className="HW-r1 tabBox">
-        <div className="HW-c1 w-60">
+      <div className="row">
+        <div className="col-md-7">
           <h2 className="heading-2">How will I know if I have rabies?</h2>
           <p>
             After the virus enters the human body, it should travel to the brain
@@ -25,12 +25,12 @@ export const HWIKIHR = () => {
             <li>Sensitivity to changes in temperature</li>
           </ul>
         </div>
-        <div className="HW-c2 w-40">
-          <img src="./images/mask/child_dog.jpg" alt="" />
+        <div className="col-md-5">
+          <img src="/images/mask/child_dog.jpg" alt="paw" />
         </div>
       </div>
       <div className="h-s2 bgPrimary p-4 my-4 w-70 rounded-3">
-        <p className="m-0">
+        <p className="m-0 text-white">
           Rabies can occur in two different forms – ‘furious’ rabies and
           ‘paralytic’ rabies.
         </p>
@@ -52,10 +52,12 @@ export const HWIKIHR = () => {
   );
 };
 const Wrapper = styled.section`
-  .h-s2 {
-    background-color: #004298;
-    p {
-      color: var(--whiteColor);
-    }
-  }
+.h-s2 { background-color: #004298; }
+img {
+  mask-image: url("/images/mask/pawprint.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  width: 100%;
+}
 `;

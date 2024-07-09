@@ -9,8 +9,8 @@ const Resources = () => {
       <div className="resources">
         <h2 className="mb-3">Resources</h2>
         <div className="pdfs">
-          {resources.map((item) => (
-            <div className="pdfBox">
+          {resources.map((item, idx) => (
+            <div key={idx} className="pdfBox">
               <div className="image">
                 <img src={"/images/icons/pdf.svg"} width={20} alt="pdf" />
               </div>

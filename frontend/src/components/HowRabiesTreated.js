@@ -4,8 +4,8 @@ import styled from "styled-components";
 export const HowRabiesTreated = () => {
   return (
     <Wrapper>
-      <div className="DR-r1 tabBox">
-        <div className="DR-c1 w-60">
+      <div className="row">
+        <div className="col-md-7">
           <h2 className="heading-2">How is rabies treated?</h2>
           <p>
             Rabies is usually fatal as there's no effective treatment for this
@@ -30,11 +30,11 @@ export const HowRabiesTreated = () => {
             </li>
           </ul>
         </div>
-        <div className="DR-c2 w-40">
-          <img src="./images/mask/doctor_dog.jpg" alt="" />
+        <div className="col-md-5">
+          <img src="/images/mask/doctor_dog.jpg" alt="doctor_dog" />
         </div>
       </div>
-      <div className="DR-r2 ">
+      <div>
         <p>
           If the animal that has bitten you is known to have rabies, the rabies
           vaccine is given. But, if the animal cannot be found, it is safe to
@@ -86,4 +86,12 @@ export const HowRabiesTreated = () => {
     </Wrapper>
   );
 };
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  img {
+    mask-image: url("/images/mask/pawprint.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    width: 100%;
+  }
+`;

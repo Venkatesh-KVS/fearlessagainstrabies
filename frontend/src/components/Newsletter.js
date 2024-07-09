@@ -39,15 +39,15 @@ const NewsLetter = () => {
   return (
     <div>
       <form onSubmit={handleSubmit} className="emailForm">
-        <div class="mb-3 ">
-          <label htmlFor="exampleInputEmail1" class="form-label">
+        <div className="mb-3 ">
+          <label htmlFor="exampleInputEmail1" className="form-label">
             <h3 className="heading-3">Subscribe to the newsletter</h3>
           </label>
 
           <input
             required
             type="email"
-            class="form-control"
+            className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             placeholder="Your Email"
@@ -56,7 +56,7 @@ const NewsLetter = () => {
           />
         </div>
 
-        <button type="submit" variant="contained" class="btn">
+        <button type="submit" variant="contained" className="btn">
           Submit
         </button>
       </form>

@@ -10,8 +10,8 @@ const ClinicalTrials = () => {
         <h2 className="mb-3">Clinical Trials</h2>
 
         <div className="pdfs">
-          {clinicalTrialsData.map((item) => (
-            <div className="pdfBox">
+          {clinicalTrialsData.map((item, idx) => (
+            <div key={idx} className="pdfBox">
               <div className="image">
                 <img src={"/images/icons/pdf.svg"} width={20} alt="pdf" />
               </div>

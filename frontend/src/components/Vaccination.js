@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Vaccination = () => {
   return (
     <Wrapper>
-      <div className="Vac-r1 tabBox">
-        <div className="Vac-c1 w-60">
+      <div className="Vac-r1 row">
+        <div className="Vac-c1 col-md-7">
           <h2 className="heading-2">Vaccination</h2>
           <p>
             Rabies vaccine is an active immunizing agent made of killed rabies
@@ -27,11 +27,11 @@ export const Vaccination = () => {
             also known as post-exposure prophylaxis.
           </p>
         </div>
-        <div className="Vac-c2 w-40">
-          <img src="./images/mask/man_dog.jpg" alt="" />
+        <div className="Vac-c2 col-md-5">
+          <img src="/images/mask/man_dog.jpg" alt="" />
         </div>
       </div>
-      <div className="Vac-r2 ">
+      <div>
         <p>
           This type of vaccination is typically given as an intramuscular
           injection on days 0, 3, 7, 14 and 28. Human rabies immune globulin is
@@ -68,9 +68,11 @@ export const Vaccination = () => {
   );
 };
 const Wrapper = styled.section`
-  .Vac-r1 {
-    img {
-      mask-image: url("./images/mask/puppy.svg") !important;
-    }
+  img {
+    mask-image: url("/images/mask/puppy.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    width: 100%;
   }
 `;

@@ -5,7 +5,7 @@ export const AboutRabies = () => {
   return (
     <Wrapper>
       <div className="aboutRabies">
-        <div className="aT_r1 ">
+        <div>
           <h2 className="heading-2">About Rabies</h2>
           <p>
             What strikes first to your mind when you hear ‘rabies’? A dog bite
@@ -15,8 +15,8 @@ export const AboutRabies = () => {
             disease.
           </p>
         </div>
-        <div className="aT_r2 tabBox">
-          <div className="AT_c1 w-60">
+        <div className="row">
+          <div className="AT_c1 col-md-7">
             <h3 className="heading-3">What is Rabies?</h3>
             <p>
               Rabies is a deadly disease caused by rabies virus, which mainly
@@ -41,12 +41,20 @@ export const AboutRabies = () => {
               happen when an animal licks an open cut on the skin.
             </p>
           </div>
-          <div className="AT_c2 w-40">
-            <img src="./images/mask/women_dog.jpg" alt="" />
+          <div className="col-md-5">
+            <img src="/images/mask/women_dog.jpg" alt="womenDog" />
           </div>
         </div>
       </div>
     </Wrapper>
   );
 };
-const Wrapper = styled.section``;
+const Wrapper = styled.div`
+img {
+  mask-image: url("/images/mask/pawprint.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  width: 100%;
+}
+`;

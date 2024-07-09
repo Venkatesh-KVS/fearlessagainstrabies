@@ -5,8 +5,8 @@ export const AboutTab = () => {
   return (
     <Wrapper>
       <div className="aboutTab">
-        <div className="aT_r1 tabBox">
-          <div className="AT_c1 w-60">
+        <div className="tabBox row gx-2">
+          <div className="AT_c1 col-md-7">
             <h2 className="heading-2">About Fearless Against Rabies</h2>
             <p>
               ‘Fearless Against Rabies’ is an initiative by Human Biologicals
@@ -36,11 +36,11 @@ export const AboutTab = () => {
               transmitted to humans.
             </p>
           </div>
-          <div className="AT_c2 w-40">
-            <img src="./images/mask/doctor_dog.jpg" alt="" />
+          <div className="col-md-5">
+            <img src="/images/mask/doctor_dog.jpg" alt="" />
           </div>
         </div>
-        <div className="aT_r2">
+        <div>
           <h2 className="heading-2">
             Rabies can be prevented by pre-exposure vaccination.
           </h2>
@@ -65,13 +65,11 @@ export const AboutTab = () => {
   );
 };
 const Wrapper = styled.section`
-  .AT_c2 {
-    img {
-      mask-image: url("./images/mask/pawprint.svg");
-      mask-repeat: no-repeat;
-      mask-size: contain;
-      mask-position: center;
-      width: 100%;
-    }
-  }
+img {
+  mask-image: url("/images/mask/pawprint.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  width: 100%;
+}
 `;

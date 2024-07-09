@@ -6,11 +6,10 @@ import Accordion from "react-bootstrap/Accordion";
 const CaseStudies = () => {
   return (
     <Wrapper>
-      <div>
         <h2 className="mb-3">Case Studies</h2>
         <div className="pdfs">
-          {caseStudiesData.map((item) => (
-            <div className="pdfBox">
+          {caseStudiesData.map((item, idx) => (
+            <div key={idx} className="pdfBox">
               <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="">
                   <Accordion.Header>{item.title}</Accordion.Header>
@@ -20,7 +19,6 @@ const CaseStudies = () => {
             </div>
           ))}
         </div>
-      </div>
     </Wrapper>
   );
 };
@@ -42,4 +40,10 @@ const Wrapper = styled.section`
     font-family: inherit !important;
     padding: 0;
   }
+
+@media (max-width: 768px) {
+  .accordion-item {
+    width: auto;
+  }
+}
 `;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 
-export default function FARbtn({ url }) {
+export default function FARbtn({ to }) {
   return (
-    <NavLink to={url}>
+    <NavLink to={to}>
         <button className='far-btn'>
             View more
         </button>

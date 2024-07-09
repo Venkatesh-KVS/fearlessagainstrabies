@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Tabs, Tab, Typography, Box } from "@mui/material";
+import { Tabs, Tab, Box } from "@mui/material";
 import { AboutRabies } from "../components/AboutRabies";
 import { HWIKIHR } from "../components/HWIKIHR";
 import { DiagnosingRabies } from "../components/DiagnosingRabies";
@@ -22,7 +22,7 @@ const TabPanel = (props) => {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <div>{children}</div>
         </Box>
       )}
     </div>
@@ -39,26 +39,21 @@ const RabiesAndYou = () => {
   return (
     <Wrapper>
       <div className="RaY">
-        <div className="pageBanner RaY-banner d-flex">
-          <div className="left w-50 "></div>
-          <div className="right w-50 ">
-            <h3 className="heading-3 textColor m-0">LEARN ABOUT RABIES AND</h3>
-            <h1 className="heading-1 primaryColor">protect yourself</h1>
+        <div className="pageBanner RaY-banner d-flex align-items-end">
+          <div className="row container mx-auto p-md-5 px-2">
+            <div className="col-md-6"></div>
+            <div className="col-md-6 px-4">
+              <h3 className="heading-3 textColor m-0"> LEARN ABOUT RABIES AND </h3>
+              <h1 className="heading-1 primaryColor">Protect Yourself</h1>
+            </div>
           </div>
         </div>
         <div className="aboutTabs container">
-          <div className="tabs d-flex">
+          <div className="tabs d-md-flex">
             <div className="tabTitles">
-              <Tabs
-                value={value}
-                onChange={handleChange}
-                orientation="vertical"
-              >
+              <Tabs value={value} onChange={handleChange} orientation="vertical">
                 <Tab className="tabTitle" label="About Rabies" />
-                <Tab
-                  className="tabTitle"
-                  label="How will I know if I have rabies?"
-                />
+                <Tab className="tabTitle" label="How will I know if I have rabies?" />
                 <Tab className="tabTitle" label="Diagnosing Rabies" />
                 <Tab className="tabTitle" label="How is rabies treated?" />
                 <Tab className="tabTitle" label="Prevention of rabies" />
@@ -143,6 +138,31 @@ const Wrapper = styled.section`
         font-family: inherit;
         font-weight: 600;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 { line-height: 0.8em !important; }
+    h3 { margin-bottom: 10px !important; }
+    .tabs {
+      margin: 25px auto !important;
+      .tabTitles {
+        width: 100%;
+      }
+      .tabTitle {
+        width: auto;
+        flex: 1 1 auto;
+      }
+      button {
+        width: 100% !important;
+      }
+      .MuiTabs-root {
+        flex-direction: row;
+        overflow-x: auto;
+      }
+    }
+    .MuiBox-root {
+      padding: 0;
     }
   }
 `;

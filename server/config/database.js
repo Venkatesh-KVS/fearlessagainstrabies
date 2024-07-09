@@ -1,22 +1,16 @@
+require('dotenv').config();
 const mysql = require('mysql2');
 
-const createFARdbConnection = () => {
-    const fardb0 = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'admin123',
-        database: 'far_db0'
-    });
+const pool = mysql.createPool({
+  connectionLimit: 40,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DATABASE
+});
 
-    fardb0.connect((err) => {
-        if (err) {
-            console.error('Error connecting to AFR database:', err);
-            process.exit(1);
-        }
-        console.log('DB connected');
-    });
-
-    return fardb0;
+const createpoolConnection = () => {
+  return pool;
 };
 
-module.exports = createFARdbConnection;
+module.exports = createpoolConnection;

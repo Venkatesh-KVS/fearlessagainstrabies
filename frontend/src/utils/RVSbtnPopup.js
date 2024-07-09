@@ -1,54 +1,34 @@
-import React, { useState } from "react";
-import { TextField, Box } from "@mui/material";
+import React from 'react';
+import Modal from 'react-bootstrap/Modal';
+// import VaccineSchedulesWrpr from '../components/VaccineSchedulesWrpr';
+// import Button from 'react-bootstrap/Button';
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-
-const RVSbtnPopup = ({ onClose, onSubmit }) => {
-  const [number, setNumber] = useState("");
-
-  const handleInputChange = (event) => {
-    setNumber(event.target.value);
-  };
-
-  const handleSubmit = () => {
-    // Call onSubmit callback with the entered number
-    onSubmit(number);
-  };
+function RVSbtnPopup({ show, onHide, selectedDate, scheduleDates, mobileNumber }) {
   return (
-    <div>
-      <div className="popup mt-3">
-        <Box className="popup-inner" sx={style}>
-          <h3 className="heading-4">Enter your mobile Number</h3>
-          {/* <input
-            type="number"
-            value={number}
-            onChange={handleInputChange}
-            placeholder="Enter a number"
-          /> */}
-          <TextField
-            id="outlined-number"
-            label="Number"
-            onChange={handleInputChange}
-            InputLabelProps={{
-              shrink: true,
-            }}
-          />
-          <button onClick={handleSubmit}>Submit</button>
-          <button onClick={onClose}>Close</button>
-        </Box>
-      </div>
-    </div>
+    <Modal
+      show={show}
+      onHide={onHide}
+      size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          <h2 className='heading-3 mb-0 primaryColor'> Thank Your for Registering </h2>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body className='p-md-5 p-3 d-flex-cc flex-column'>
+        <img src="/images/success_png.png" alt="success" className='mx-auto mb-3' style={{width: "150px"}} />
+        <p className='text-center'> Based on 1st dose date your remanining 4 doses dates are scheduled as below, You'll get notified for your next dose 1 day before </p>
+        {/* <hr />
+        { scheduleDates && <VaccineSchedulesWrpr scheduleDates={scheduleDates} mobileNumber={mobileNumber} /> } */}
+      </Modal.Body>
+      {/* <Modal.Footer>
+        <Button onClick={onHide}>Close</Button>
+      </Modal.Footer> */}
+    </Modal>
   );
-};
+}
 
-export default RVSbtnPopup;
+
+export default RVSbtnPopup

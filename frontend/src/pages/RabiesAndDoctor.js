@@ -1,43 +1,13 @@
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import styled from "styled-components";
 import DoctorsPage from "./DoctorsPage";
 
-export default function RabiesAndDoctor() {
+export default function RabiesAndDoctor({ auth, doctorId, setAuth, setDoctorId }) {
   return (
     <Wrapper>
-      <div className=" pageBanner"></div>
+      <div className="pageBanner"></div>
       <div className="  page-info">
         <div className="log_info">
-          <DoctorsPage />
-        </div>
-      </div>
-      <div className="login_sec">
-        <div className="RaD container  ">
-          <div className="form mt-5">
-            <TextField
-              required
-              id="filled-required"
-              type="number"
-              className="w-30"
-              label="Register Phone Number"
-              variant="filled"
-            />
-            <TextField
-              required
-              id="filled-password-input"
-              type="password"
-              className="w-30"
-              label="Password"
-              variant="filled"
-              autoComplete="current-password"
-            />
-          </div>
-          <div className="loginBth">
-            <Button className="frmBtn" variant="contained">
-              Login
-            </Button>
-          </div>
+          <DoctorsPage doctorId={doctorId} setDoctorId={setAuth} auth={auth} setAuth={setAuth} />
         </div>
       </div>
     </Wrapper>
@@ -46,7 +16,9 @@ export default function RabiesAndDoctor() {
 const Wrapper = styled.section`
   .pageBanner {
     height: 48vh;
-    background-image: url("./images/banner/login.jpg");
+    background-image: url("./images/banner/login-2.png");
+    background-attachment: inherit;
+    background-position: bottom;
   }
   .RaD {
     text-align: center;
@@ -62,6 +34,13 @@ const Wrapper = styled.section`
       &:hover {
         background-color: var(--primaryColor);
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pageBanner {
+      height:100px;
+      background-image: url("./images/banner/login-2.png");
     }
   }
 `;

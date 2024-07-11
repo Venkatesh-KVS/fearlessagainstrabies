@@ -20,8 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
 
 app.use(cors({
-  // origin: ['http://localhost:3400'],
-  origin: ['https://far-frontend-8a62ab4bfdf3.herokuapp.com'],
+  origin: [ process.env.FRNTND_ORIGIN_URL ],
   methods: ["GET", "POST", "DELETE", "PUT", "PATCH"],
   credentials: true
 }));

@@ -48,7 +48,7 @@ const verifyOTP = async (req, res) => {
         }
   
         try {
-          await SendScheduledDates(mobileNumber, userdata[0].user_name, dosageDates);
+          await SendScheduledDates(mobileNumber, userName, dosageDates);
           res.json({
             Status: "Verified",
             dosageDates: {
